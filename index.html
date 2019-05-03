@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Map Editor</title>
+
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <link rel="shortcut icon" href="favicon.ico">
+  </head>
+  <body>
+      <div class="grid-container">
+          <div class="grid-header">
+              <div class="menu header-menu">
+                <div class="menu-item" id="header-menu-file-new">New</div>
+                <div class="menu-item" id="header-menu-file-load">Load</div>
+                <div class="menu-item" id="header-menu-file-save">Save</div>
+                <div class="menu-item" id="header-menu-file-save-as">Save as</div>
+              </div>
+          </div>
+
+          <!--left section-->
+          <div class="grid-left">
+            <div class="menu section-menu">
+              <div class="menu-item" active="true">Scene</div>
+            </div>
+            <div class="section-con section-con-left"></div>
+          </div>
+
+          <!--middle section-->
+          <div class="grid-middle">
+            <div class="menu section-menu">
+              <div class="menu-item" active="true">Map</div>
+              <div class="menu-item">Object</div>
+              <div class="menu-item">Palette</div>
+            </div>
+            <div class="section-con section-con-middle">
+                <canvas id="map"></canvas>
+            </div>
+          </div>
+
+          <!--right section-->
+          <div class="grid-right">
+              <div class="menu section-menu">
+                  <div class="menu-item" active="true">Inspector</div>
+                </div>
+              <div class="section-con section-con-right"></div>
+          </div>
+        </div>
+
+        <div id="toast-con" class="toast-con">
+          <div class="toast">file saved</div>
+        </div>
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+  </body>
+</html>
